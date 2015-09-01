@@ -1,1 +1,15 @@
+{{model.timezone}}
+{{model.currently.apparentTemperature}}
+{{model.currently.summary}}
+{{model.currently.icon}}
+{{model.currently.temperature}}
+{{sky-icon height="100" width="100" icon="partly-cloudy-day" color="blue"}}
+
+{{#each model.daily.data as |daytime|}}
+    <p class="min">{{daytime.temperatureMin}}</p>
+    {{daytime.temperatureMax}}
+    {{daytime.icon}}
+
+
+{{/each}}
 {{outlet}}
